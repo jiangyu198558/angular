@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS模块</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" runoob-directive></div>
+    <script>
+        var app = angular.module("myApp", []);
+        app.directive('runoobDirective', [function () {
+            return {
+                template: "我在指令构造器中！"
+            };
+        }])
+    </script>
+</body>
+</html>

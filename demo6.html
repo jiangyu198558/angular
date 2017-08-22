@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS表单</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="formCtrl">
+        <form action="">
+            First Name: <input type="text" ng-model="firstname">
+            <br>
+            Check to show a header:
+            <input type="checkbox" ng-model="myVar">
+            <br>
+            选择一个选项：
+            <select ng-model="myVar2" name="" id="">
+                <option value=""></option>
+                <option value="dogs">Dogs</option>
+                <option value="tuts">Tutorials</option>
+                <option value="cars">Cars</option>
+            </select>
+        </form>
+        <h1>You entered: {{firstname}}</h1>
+        <h1 ng-show="myVar">My Header</h1>
+    </div>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller('formCtrl', ['$scope', function ($scope) {
+            $scope.firstname = "John";
+        }])
+    </script>
+</body>
+</html>
